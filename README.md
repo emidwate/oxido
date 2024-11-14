@@ -1,4 +1,4 @@
-# Oxido zadanie rekrutacyjne
+# Oxido 
 Created using Javascript and Node.js
 To run this project you need to have Node environment installed on your machine,
 simply download files to your computer, open terminal in root directory, 
