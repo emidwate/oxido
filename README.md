@@ -6,4 +6,4 @@ type 'npm i' then 'node openAIQuery.js' and voilà.
 Don't forget to place your API key in .env file, otherwise it won't work!
 
 The program works in a simple way, downloaded content of the article from tresc_artykulu.txt file in the articleContent.js 
-is passed to openAIQuery.js where as a prompt we give it to AI and wait for response which will appear in artykul.html 
+is passed to openAIQuery.js where as a prompt we give it to ChatGPT and wait for response which will appear in artykul.html 
