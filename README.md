@@ -8,3 +8,5 @@ Don't forget to place your API key in .env file, otherwise it won't work!
 
 The program works in a simple way, downloaded content of the article from tresc_artykulu.txt file in the articleContent.js 
 is passed to openAIQuery.js where as a prompt we give it to ChatGPT and wait for response which will appear in artykul.html 
+
+You can see a sample preview in the file podglad.html
