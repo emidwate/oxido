@@ -15,8 +15,8 @@ async function template() {
         {
             role: "system",
             content: `
-                        Jesteś deweloperem tworzącym szablon dla artykułu. Stwórz plik html, który uzupełnisz o dane
-                        podane przez użytkownika. Nie dodawaj komentarzy, nie oznaczaj,że to plik html, nie dodawaj artykułu. Pozostaw tagi body puste wewnątrz.
+                        Jesteś deweloperem tworzącym szablon dla artykułu. Stwórz plik html, który uzupełnisz o dane podane przez użytkownika. 
+                        Nie dodawaj komentarzy, bez prefiksu. Pozostaw tag body pusty wewnątrz.
                     `
         },
         {
@@ -37,9 +37,9 @@ async function template() {
                         document.body.innerHTML = ""
                         for (let bodyChild of bodyNodes) {
                             if(bodyChild.nodeName == '#text') {
-                                const elementsToArray = Array.from(bodyChild.nodeValue.split("\n"))
-                                const cleanedData = elementsToArray.map(item => item.trim()).filter(item => item !== "")
-                                cleanedData.forEach((elem, index) => {
+                                const textToArray = Array.from(bodyChild.nodeValue.split("\n"))
+                                const trimmedText = textToArray.filter(item => item !== "")
+                                trimmedText.forEach((elem, index) => {
                                     if (index == 0) {
                                         const h2 = createHTMLTag('h2', ["innerText", "className"], [elem, "title"])
                                         document.body.appendChild(h2)
