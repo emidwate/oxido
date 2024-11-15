@@ -5,11 +5,13 @@ simply download files to your computer, open terminal in root directory,
 type 'npm i' then 'node openAIQuery.js' and voilà.
 To create template for this project simply type 'node template.js'.
 
-It is best to delete the artykul.html and szablon.html files, they will be recreated after running the above commands.
+It is best to delete the artykul.html and szablon.html files, they will be recreated after running the above commands,
+even if you don't do this the program will still work!
 
 You can see a sample preview in the file podglad.html, just open it in your browser by double-clicking on it.
 
 Don't forget to place your API key in .env file, otherwise it won't work!
 
-The program works in a simple way, downloaded content of the article from tresc_artykulu.txt file in the articleContent.js 
-is passed to openAIQuery.js where as a prompt we give it to ChatGPT and wait for response which will appear in artykul.html 
+The program works in a simple way, the content of the article is downloaded from tresc_artykulu.txt file in the articleContent.js 
+and passed to openAIQuery.js where as a prompt it is given give to ChatGPT as a prompt and the response is awaited, 
+which will appear in artykul.html 
