@@ -3,80 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tytuł artykułu</title>
+    <title>Artykuł</title>
     <style>
-        * {padding: 0;margin: 0;box-sizing: border-box;}body{width: 300px;margin: 3rem auto;text-align: center;} 
-        figure {margin: 3rem auto;max-width: 650px;text-align: center;display: flex;flex-direction: column;gap: 1rem;}
-        .content {margin: 1rem 0;font-size: 1rem;color: #333333;font-family: Georgia, 'Times New Roman', Times, serif;}
-        .title {padding-bottom: 1rem;border-bottom: 2px solid black;}
-        @media screen and (min-width: 600px) {body {width: 800px;}}
+        * {margin: 0; padding: 0; box-sizing: border-box;} 
+        body {margin: 2rem; background-color: #f4f4f4; line-height: 1.6; font-family: 'Cambria', 'Cochin', 'Georgia', 'Times', 'Times New Roman', serif;} 
+        .article {margin-bottom: 2rem;} 
+        .content {padding: 3rem; margin-bottom: 2rem; text-align: center; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);} 
+        .title {color: #333; padding-bottom: 0.5rem; border-bottom: 2px solid #f5a623;} 
+        .paragraph {font-size: 1.1rem; margin: 1rem 0; color: #666;} 
+        .img {width: 100%; height: auto; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);} 
+        figure {text-align: center;} 
+        figcaption {font-size: 1.2rem; color: #666; font-style: italic;} 
+        @media screen and (min-width: 600px) {body {max-width: 1000px; margin: 3rem auto;} 
+        .article {display: flex; gap: 3rem; margin-bottom: 3rem;} .content {width: 60%;} .title {font-size: 2.2rem;} .img {width: 100%; height: 450px;}}
     </style>
 </head>
 <body>
-Sztuczna inteligencja: wpływ i wyzwania
-
-Sztuczna inteligencja to dziedzina nauki i technologii zajmująca się tworzeniem maszyn i programów zdolnych do wykonywania zadań wymagających ludzkiej inteligencji, takich jak uczenie się, rozumienie języka naturalnego i podejmowanie decyzji. AI stała się integralną częścią naszego codziennego życia, od asystentów głosowych w smartfonach, jak Siri czy Google Assistant, po systemy rekomendacyjne na platformach streamingowych, takich jak Netflix czy Spotify. Wspiera nas w planowaniu tras, automatyzacji domowych urządzeń oraz w komunikacji. Obecnie jest o niej bardzo głośno chociażby za sprawą dużych modeli językowych, jak ChatGPT.
-
-Rozwój uczenia maszynowego i głębokiego uczenia umożliwił tworzenie zaawansowanych modeli, które potrafią samodzielnie rozwiązywać skomplikowane problemy. Sieci neuronowe analizują ogromne ilości danych w obszarach takich jak rozpoznawanie obrazów czy przetwarzanie języka naturalnego. Dzięki temu AI nie tylko przetwarza dane, ale także podejmuje decyzje, wcześniej zarezerwowane dla ludzi.
-
-<figure>
-    <img src="image_placeholder.jpg" alt="Sztuczna inteligencja wspiera codzienne życie ludzi i rozwiązuje problemy." />
-    <figcaption>Technologia</figcaption>
-</figure>
-
-Wyzwania etyczne i społeczne
-
-Kluczowym wyzwaniem jest zapewnienie etycznego i odpowiedzialnego rozwoju AI. Należy zwracać uwagę na uprzedzenia w danych treningowych, które mogą prowadzić do dyskryminacji, oraz na wpływ AI na prywatność i nierówności społeczne. Ważne jest opracowanie ram etycznych i mechanizmów nadzoru regulujących rozwój i wdrażanie AI, a także włączanie różnych grup społecznych w ten proces. Transparentność działań firm i instytucji może pomóc w budowaniu zaufania do technologii.
-
-Badacze pracują nad rozwiązaniami umożliwiającymi harmonijne współistnienie ludzi i AI, koncentrując się na tworzeniu systemów wspierających człowieka, a nie go zastępujących. Istotne jest opracowywanie mechanizmów współpracy między człowiekiem a maszyną, co sprzyja synergii i skutecznej komunikacji.
-
-<figure>
-    <img src="image_placeholder.jpg" alt="Wyzwania etyczne związane z rozwojem sztucznej inteligencji wymagają współpracy ludzi." />
-    <figcaption>Etyka</figcaption>
-</figure>
-
-Automatyzacja i przyszłość rynku pracy
-
-Automatyzacja procesów dzięki AI przynosi korzyści w postaci zwiększonej efektywności i redukcji kosztów. Jednak istnieją obawy dotyczące wpływu na rynek pracy i potencjalnego zastąpienia ludzi przez maszyny. Kluczowe jest przemyślane podejście do transformacji rynku pracy, inwestycja w edukację i przekwalifikowanie pracowników, aby mogli oni znaleźć nowe role w gospodarce przyszłości.
-
-Specjaliści powinni być gotowi na ciągłe doskonalenie swoich umiejętności, ucząc się m.in. zasad działania algorytmów AI. Przyszłość pracy będzie wymagać nie tylko umiejętności technicznych, ale także kompetencji miękkich, takich jak kreatywność i zdolność rozwiązywania problemów.
-
-<figure>
-    <img src="image_placeholder.jpg" alt="Automatyzacja procesów zmienia rynek pracy i wymaga przemyślanej adaptacji." />
-    <figcaption>Przyszłość</figcaption>
-</figure>
-
-Nasza zdolność do adaptacji i innowacji zdecyduje o tym, jak AI wpłynie na przyszłość ludzkości. Wspólnie możemy kształtować tę przyszłość, wykorzystując AI dla dobra wszystkich.
-
-*Tekst opracowany przez AI. W Oxido nie mamy aż tak cukierkowego spojrzenia na sztuczną inteligencję... ;)
+    <div class="article">
+        <div class="content">
+            <h2 class="title">Sztuczna inteligencja: wpływ i wyzwania</h2>
+            <p class="paragraph">Sztuczna inteligencja to dziedzina nauki i technologii zajmująca się tworzeniem maszyn i programów zdolnych do wykonywania zadań wymagających ludzkiej inteligencji. AI stała się integralną częścią naszego codziennego życia, wspiera nas w wielu codziennych czynnościach.</p>
+            <p class="paragraph">Rozwój uczenia maszynowego umożliwił tworzenie zaawansowanych modeli potrafiących samodzielnie rozwiązywać problemy. Dzięki temu AI podejmuje decyzje, wcześniej zarezerwowane dla ludzi, analizując ogromne ilości danych.</p>
+        </div>
+        <figure>
+            <img class="img" src="./img/wplyw.webp" alt="AI wpłynęła na codzienne życie i pozwala na rozwiązywanie problemów przez maszyny.">
+            <figcaption>Nowoczesność</figcaption>
+        </figure>
+    </div>
+    
+    <div class="article">
+        <div class="content">
+            <h2 class="title">Wyzwania etyczne i społeczne</h2>
+            <p class="paragraph">Kluczowym wyzwaniem jest zapewnienie etycznego i odpowiedzialnego rozwoju AI. Należy zwracać uwagę na uprzedzenia w danych treningowych, które mogą prowadzić do dyskryminacji.</p>
+            <p class="paragraph">Badacze pracują nad rozwiązaniami umożliwiającymi harmonijne współistnienie ludzi i AI, koncentrując się na tworzeniu systemów wspierających człowieka.</p>
+        </div>
+        <figure>
+            <img class="img" src="./img/wyzwania.webp" alt="Etyczne wyzwania związane z rozwojem AI i rola współpracy ludzi.">
+            <figcaption>Etyka</figcaption>
+        </figure>
+    </div>
+    
+    <div class="article">
+        <div class="content">
+            <h2 class="title">Automatyzacja i przyszłość rynku pracy</h2>
+            <p class="paragraph">Automatyzacja procesów dzięki AI przynosi korzyści w postaci zwiększonej efektywności i redukcji kosztów. Istnieją jednak obawy dotyczące wpływu na rynek pracy i potencjalnego zastąpienia ludzi przez maszyny.</p>
+            <p class="paragraph">Specjaliści powinni być gotowi na ciągłe doskonalenie swoich umiejętności, ucząc się zasad działania algorytmów AI. Przyszłość pracy wymaga również kompetencji miękkich.</p>
+        </div>
+        <figure>
+            <img class="img" src="./img/automatyzacja.webp" alt="Automatyzacja wpływa na efektywność, ale niesie ryzyko dla rynku pracy.">
+            <figcaption>Automatyzacja</figcaption>
+        </figure>
+    </div>
 </body>
-<script>
-    const originalBody = document.body.cloneNode(true)
-    const bodyNodes = Array.from(originalBody.childNodes)
-    document.body.innerHTML = ""
-    for (let bodyChild of bodyNodes) {
-        if(bodyChild.nodeName == '#text') {
-            const textToArray = Array.from(bodyChild.nodeValue.split("\n"))
-            const trimmedText = textToArray.filter(item => item !== "")
-            trimmedText.forEach((elem, index) => {
-                if (index == 0) {
-                    const h2 = createHTMLTag('h2', ["innerText", "className"], [elem, "title"])
-                    document.body.appendChild(h2)
-                } else {
-                    const p = createHTMLTag("p", ["innerText", "className"], [elem, "content"])
-                    p.innerText == "undefined" ? '' : document.body.appendChild(p)
-                }
-            })
-        } else if (bodyChild.nodeName == "FIGURE") {
-            document.body.appendChild(bodyChild)
-        }
-    }
-    function createHTMLTag(tagName, attributes, values) {
-        const element = document.createElement(tagName)
-        attributes.forEach((option, index) => {
-            element[option] = values[index]
-        })
-        return element
-    }
-</script>
 </html>

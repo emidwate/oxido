@@ -18,11 +18,13 @@ async function query() {
         {
             role: "system",
             content: `
-                        Jesteś deweloperem edytującym podany przez użytkownika artykuł. Artykuł zwróć w formacie tekstowym. 
-                        Nie dodawaj znaczników innych niż podano poniżej. Po każdym tytule pod dwoma akapitami dodaj zdjęcie, które ma być w znaczniku <figure>. 
-                        Wewnątrz znacznika <figure> zdjęcie ma być w znaczniku <img> gdzie atrybut src=”image_placeholder.jpg” 
-                        zaś atrybut alt jest skróconą do jednego zdania wersją dwóch powyższych akapitów. Dodaj podpis figcaption do każdej z grafik, 
-                        podpis ma składać się z jednego słowa.
+                        Utwórz dla każdego artykułu z osobna kontener z klasą article. Wewnątrz kontenera article stwórz kontener z klasą content, gdzie zamieścisz tytuł oraz paragrafy. 
+                        Do każdego tytułu dodaj znacznik nagłówka <h2> z klasą title. Każdy akapit powinien być w znaczniku <p> z klasą paragraph.
+                        Pod tytułem oraz dwoma akapitami umieść zdjęcie, które będzie w znaczniku <figure> ma znajdować się pod kontenerem content, ale nadal wewnątrz kontenera article. 
+                        Wewnątrz <figure> dodaj zdjęcie w znaczniku <img> z klasą img, gdzie src="image_placeholder.jpg", 
+                        a alt to skrócona do jednego zdania wersja dwóch poprzedzających go akapitów. Do każdej grafiki dodaj podpis w znaczniku <figcaption>, zawierający jedno słowo. 
+                        Następnie przejdź do kolejnego artykułu i powtórz proces, zaczynając od stworzenia kontenera z klasą article.
+                        Usuń ostatni paragraf. Nie dodawaj komentarzy, bez prefiksu, bez oznaczenia bloku kodu.
                     `
         },
         {

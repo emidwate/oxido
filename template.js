@@ -16,50 +16,27 @@ async function template() {
             role: "system",
             content: `
                         Jesteś deweloperem tworzącym szablon dla artykułu. Stwórz plik html, który uzupełnisz o dane podane przez użytkownika. 
-                        Nie dodawaj komentarzy, bez prefiksu. Pozostaw tag body pusty wewnątrz.
+                        Nie dodawaj komentarzy, bez prefiksu, bez oznaczenia bloku kodu. Pozostaw tag body pusty wewnątrz.
                     `
         },
         {
             role: "user",
             content: `
-                        Dodaj styl do pliku 
-                        <style>
-                            * {padding: 0;margin: 0;box-sizing: border-box;}body{width: 300px;margin: 3rem auto;text-align: center;} 
-                            figure {margin: 3rem auto;max-width: 650px;text-align: center;display: flex;flex-direction: column;gap: 1rem;}
-                            .content {margin: 1rem 0;font-size: 1rem;color: #333333;font-family: Georgia, 'Times New Roman', Times, serif;}
-                            .title {padding-bottom: 1rem;border-bottom: 2px solid black;}
-                            @media screen and (min-width: 600px) {body {width: 800px;}}
-                        </style>
+                        Do pliku dodaj styl 
+                        * {margin: 0; padding: 0; box-sizing: border-box;} 
+                        body {margin: 2rem; background-color: #f4f4f4; line-height: 1.6; font-family: 'Cambria', 'Cochin', 'Georgia', 'Times', 'Times New Roman', serif;} 
+                        .article {margin-bottom: 2rem;} 
+                        .content {padding: 3rem; margin-bottom: 2rem; text-align: center; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);} 
+                        .title {color: #333; padding-bottom: 0.5rem; border-bottom: 2px solid #f5a623;} 
+                        .paragraph {font-size: 1.1rem; margin: 1rem 0; color: #666;} 
+                        .img {width: 100%; height: auto; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);} 
+                        figure {text-align: center;} 
+                        figcaption {font-size: 1.2rem; color: #666; font-style: italic;} 
+                        @media screen and (min-width: 600px) {body {max-width: 1000px; margin: 3rem auto;} 
+                        .article {display: flex; gap: 3rem; margin-bottom: 3rem;} .content {width: 60%;} .title {font-size: 2.2rem;} .img {width: 100%; height: 450px;}}
 
-                        Dodaj skrypt JavaScript do pliku 
-                        const originalBody = document.body.cloneNode(true)
-                        const bodyNodes = Array.from(originalBody.childNodes)
-                        document.body.innerHTML = ""
-                        for (let bodyChild of bodyNodes) {
-                            if(bodyChild.nodeName == '#text') {
-                                const textToArray = Array.from(bodyChild.nodeValue.split("\n"))
-                                const trimmedText = textToArray.filter(item => item !== "")
-                                trimmedText.forEach((elem, index) => {
-                                    if (index == 0) {
-                                        const h2 = createHTMLTag('h2', ["innerText", "className"], [elem, "title"])
-                                        document.body.appendChild(h2)
-                                    } else {
-                                        const p = createHTMLTag("p", ["innerText", "className"], [elem, "content"])
-                                        p.innerText == "undefined" ? '' : document.body.appendChild(p)
-                                    }
-                                })
-                            } else if (bodyChild.nodeName == "FIGURE") {
-                                document.body.appendChild(bodyChild)
-                            }
-                        }
-                        function createHTMLTag(tagName, attributes, values) {
-                            const element = document.createElement(tagName)
-                            attributes.forEach((option, index) => {
-                                element[option] = values[index]
-                            })
-                            return element
-                        }    
-                    `
+
+                     `
         }
     ]
     
